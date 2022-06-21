@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.form-stacked {
+  width: 100%;
+  max-width: 500px;
+  margin: 4rem auto;
+}
+.form-stacked-field {
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+  position: relative;
+}
+.form-stacked-field label {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transform: translate(0, 0) scale(1);
+  transform-origin: bottom left;
+  transition: all 150ms ease;
+}
+.form-stacked-field.active label {
+  transform: translate(0, -1.5rem) scale(0.75);
+}
+
+.form-input {
+  width: 100%;
+  border: 0px none;
+  border-bottom: 1px solid #ddd;
+  color: #555;
+  padding: 0.5rem 0rem 0.25rem;
+  -webkit-appearance: none;
+  font-size: 1rem;
+  background: transparent;
+  position: relative;
+}
+.form-input:focus {
+  outline: 0 none;
+  border-color: #111;
+}
+.form-input:invalid {
+  border-color: red;
+}
+
+.form-button {
+  padding: 0.5rem 1.5rem;
+  display: inline-block;
+  border: 2px solid orange;
+  background-color: transparent;
+  color: orange;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+}
+.form-button:hover,
+.hs-button:focus {
+  background-color: orange;
+  color: white;
+  text-decoration: none;
+  outline: 0 none;
+}
